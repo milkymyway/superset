@@ -272,7 +272,7 @@ export default function LeftPanel({
           </Form>
           <div className="options-list" data-test="options-list">
             {!refresh &&
-              tableOptions.map((o, i) => (
+              tableOptions.map((option, i) => (
                 <div
                   className={
                     selectedTable === i ? 'options-highlighted' : 'options'
@@ -280,9 +280,9 @@ export default function LeftPanel({
                   key={i}
                   role="button"
                   tabIndex={0}
-                  onClick={() => setTable(o.value, i)}
+                  onClick={() => setTable(option.value, i)}
                 >
-                  {o.label}
+                  {option.label}
                 </div>
               ))}
           </div>
